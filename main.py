@@ -37,7 +37,7 @@ class ItemEnterEventListener(EventListener):
     def on_event(self, event, extension):
         data = event.get_data()
         if not re.match(r'^https?://', data):
-            data = 'https://'+ data
+            data = ''+ data
         
         webbrowser.open_new_tab(data)
 
